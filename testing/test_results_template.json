@@ -1,0 +1,142 @@
+{
+  "test_execution_run": {
+    "run_id": "nh-stock-analyzer-run-001",
+    "date": "2026-05-02",
+    "tester": "Navneet Hegde",
+    "environment": "Claude.ai web interface",
+    "skill_version": "1.0",
+    "results": [
+      {
+        "test_id": "test_001",
+        "test_name": "Basic Stock Analysis (AAPL)",
+        "prompt": "Analyze Apple stock (AAPL)",
+        "status": "pending",
+        "scores": {
+          "dashboard_completeness": {
+            "score": 0,
+            "max": 25,
+            "notes": "Metric cards, analyst bars, price targets, indicators, risks, signal box"
+          },
+          "data_accuracy": {
+            "score": 0,
+            "max": 25,
+            "notes": "Current price, analyst consensus %, targets from real firms, growth metrics, risk assessment"
+          },
+          "signal_quality": {
+            "score": 0,
+            "max": 20,
+            "notes": "Signal supported by data, 1-2 sentence rationale, considers analyst consensus and catalysts"
+          },
+          "prose_quality": {
+            "score": 0,
+            "max": 15,
+            "notes": "4-6 paragraphs, citations, conversational, bear/bull cases, disclaimer"
+          },
+          "trigger_accuracy": {
+            "score": 0,
+            "max": 15,
+            "notes": "Skill triggers appropriately, ticker identified correctly"
+          }
+        },
+        "total_score": {
+          "score": 0,
+          "max": 100,
+          "grade": "pending"
+        },
+        "observations": [],
+        "issues_found": [],
+        "improvements_suggested": []
+      },
+      {
+        "test_id": "test_002",
+        "test_name": "Company Name Input (Tesla)",
+        "prompt": "Should I buy Tesla?",
+        "status": "pending",
+        "scores": {
+          "dashboard_completeness": { "score": 0, "max": 25 },
+          "data_accuracy": { "score": 0, "max": 25 },
+          "signal_quality": { "score": 0, "max": 20 },
+          "prose_quality": { "score": 0, "max": 15 },
+          "trigger_accuracy": { "score": 0, "max": 15 }
+        },
+        "total_score": { "score": 0, "max": 100, "grade": "pending" },
+        "observations": [],
+        "issues_found": [],
+        "improvements_suggested": []
+      },
+      {
+        "test_id": "test_003",
+        "test_name": "1-Year Hold Decision (NVDA)",
+        "prompt": "I'm thinking about investing in NVIDIA for a 1-year hold. Should I pull the trigger?",
+        "status": "pending",
+        "scores": {
+          "dashboard_completeness": { "score": 0, "max": 25 },
+          "data_accuracy": { "score": 0, "max": 25 },
+          "signal_quality": { "score": 0, "max": 20 },
+          "prose_quality": { "score": 0, "max": 15 },
+          "trigger_accuracy": { "score": 0, "max": 15 }
+        },
+        "total_score": { "score": 0, "max": 100, "grade": "pending" },
+        "observations": [],
+        "issues_found": [],
+        "improvements_suggested": []
+      },
+      {
+        "test_id": "test_004",
+        "test_name": "Casual Inquiry (MSFT)",
+        "prompt": "How is Microsoft doing?",
+        "status": "pending",
+        "scores": {
+          "dashboard_completeness": { "score": 0, "max": 25 },
+          "data_accuracy": { "score": 0, "max": 25 },
+          "signal_quality": { "score": 0, "max": 20 },
+          "prose_quality": { "score": 0, "max": 15 },
+          "trigger_accuracy": { "score": 0, "max": 15 }
+        },
+        "total_score": { "score": 0, "max": 100, "grade": "pending" },
+        "observations": [],
+        "issues_found": [],
+        "improvements_suggested": []
+      },
+      {
+        "test_id": "test_005",
+        "test_name": "Comparison (META vs AMZN)",
+        "prompt": "Is Meta a better buy than Amazon right now?",
+        "status": "pending",
+        "scores": {
+          "dashboard_completeness": { "score": 0, "max": 25 },
+          "data_accuracy": { "score": 0, "max": 25 },
+          "signal_quality": { "score": 0, "max": 20 },
+          "prose_quality": { "score": 0, "max": 15 },
+          "trigger_accuracy": { "score": 0, "max": 15 }
+        },
+        "total_score": { "score": 0, "max": 100, "grade": "pending" },
+        "observations": [],
+        "issues_found": [],
+        "improvements_suggested": []
+      }
+    ],
+    "summary_metrics": {
+      "total_tests_run": 0,
+      "tests_passed": 0,
+      "tests_failed": 0,
+      "average_score": 0,
+      "median_score": 0,
+      "min_score": 0,
+      "max_score": 0,
+      "overall_grade": "pending"
+    },
+    "critical_issues": [],
+    "blockers_for_release": [],
+    "recommendations": {
+      "for_immediate_release": false,
+      "with_documented_limitations": false,
+      "requires_iteration": true
+    },
+    "sign_off": {
+      "tester_approved": false,
+      "approval_date": null,
+      "reviewer_notes": null
+    }
+  }
+}

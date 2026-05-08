@@ -1,0 +1,63 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if using npm for anything)
+node_modules/
+package-lock.json
+
+# Local development
+.env
+local_config.json
+DELIVERY_SUMMARY.txt
+START_HERE.md
+PACKAGING_GUIDE.md
+
+# Skill-specific testing artifacts
+test_results.json
+test_screenshots/
+
+# claude
+.claude
+
+# vs
+.vs

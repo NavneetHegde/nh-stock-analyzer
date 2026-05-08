@@ -1,0 +1,210 @@
+{
+  "skill_name": "nh-stock-analyzer",
+  "test_suite_version": "1.0",
+  "test_date": "2026-05-02",
+  "description": "Test suite for stock analysis skill covering various trigger scenarios and output validation",
+  "test_cases": [
+    {
+      "id": "test_001",
+      "category": "Basic Stock Analysis",
+      "prompt": "Analyze Apple stock (AAPL)",
+      "expected_triggers": ["nh-stock-analyzer"],
+      "success_criteria": [
+        "Renders dashboard widget with 4 metric cards",
+        "Shows current price and recent performance",
+        "Displays analyst consensus breakdown",
+        "Includes price targets and signal recommendation",
+        "Provides prose summary with citations"
+      ],
+      "priority": "critical"
+    },
+    {
+      "id": "test_002",
+      "category": "Company Name Input",
+      "prompt": "Should I buy Tesla?",
+      "expected_triggers": ["nh-stock-analyzer"],
+      "success_criteria": [
+        "Correctly identifies TSLA from company name",
+        "Renders complete dashboard",
+        "Provides buy/hold/sell signal",
+        "Includes risk assessment"
+      ],
+      "priority": "critical"
+    },
+    {
+      "id": "test_003",
+      "category": "Investment Decision Scenario",
+      "prompt": "I'm thinking about investing in NVIDIA for a 1-year hold. Should I pull the trigger?",
+      "expected_triggers": ["nh-stock-analyzer"],
+      "success_criteria": [
+        "Analyzes NVDA comprehensively",
+        "Addresses 1-year outlook specifically",
+        "Compares current price to analyst targets",
+        "Highlights key risks for holding period",
+        "Signal considers long-term factors"
+      ],
+      "priority": "critical"
+    },
+    {
+      "id": "test_004",
+      "category": "Casual Inquiry",
+      "prompt": "How is Microsoft doing?",
+      "expected_triggers": ["nh-stock-analyzer"],
+      "success_criteria": [
+        "Recognizes MSFT inquiry",
+        "Provides trend analysis",
+        "Shows momentum indicators",
+        "Includes recent catalyst information"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "test_005",
+      "category": "Performance Comparison",
+      "prompt": "Is Meta a better buy than Amazon right now?",
+      "expected_triggers": ["nh-stock-analyzer"],
+      "success_criteria": [
+        "Returns analysis for both META and AMZN",
+        "Compares valuations and growth profiles",
+        "Evaluates risk/reward for each",
+        "Provides relative assessment"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "test_006",
+      "category": "Earnings Context",
+      "prompt": "Google just reported earnings. Is the stock fairly valued?",
+      "expected_triggers": ["nh-stock-analyzer"],
+      "success_criteria": [
+        "Identifies GOOG/GOOGL ticker",
+        "Incorporates latest earnings data",
+        "Evaluates valuation post-earnings",
+        "Flags guidance implications"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "test_007",
+      "category": "Sector Comparison",
+      "prompt": "Give me a breakdown of the semiconductor stocks: NVIDIA, AMD, and QCOM",
+      "expected_triggers": ["nh-stock-analyzer"],
+      "success_criteria": [
+        "Analyzes all three tickers",
+        "Provides relative strength assessment",
+        "Identifies sector tailwinds/headwinds",
+        "Highlights key differences"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "test_008",
+      "category": "Edge Case - Unknown Ticker",
+      "prompt": "What about XYZ123 stock?",
+      "expected_triggers": ["nh-stock-analyzer"],
+      "success_criteria": [
+        "Attempts to identify the ticker",
+        "Indicates if ticker is invalid or unrecognized",
+        "Offers to search if ambiguous",
+        "Handles gracefully without error"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "test_009",
+      "category": "Small-Cap Analysis",
+      "prompt": "Should I invest in a small biotech stock like CRSP?",
+      "expected_triggers": ["nh-stock-analyzer"],
+      "success_criteria": [
+        "Analyzes CRSP (CRISPR Therapeutics)",
+        "Notes limited analyst coverage if applicable",
+        "Highlights higher volatility/risk",
+        "Provides appropriate caveats"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "test_010",
+      "category": "ETF/Index Analysis",
+      "prompt": "Is QQQ a good long-term hold?",
+      "expected_triggers": ["nh-stock-analyzer"],
+      "success_criteria": [
+        "Recognizes QQQ as Nasdaq-100 ETF",
+        "Provides appropriate analysis framework",
+        "Notes composition and sector exposure",
+        "Evaluates vs. broader market trends"
+      ],
+      "priority": "low"
+    }
+  ],
+  "evaluation_framework": {
+    "dashboard_completeness": {
+      "weight": 25,
+      "criteria": [
+        "4 metric cards present (current price, 1-week, 1-month, 52-week)",
+        "Analyst consensus bars rendered correctly",
+        "Price targets table with targets and upside/downside",
+        "Trend strength indicators with badges",
+        "Risk factors clearly identified",
+        "Signal box with colored border matching recommendation"
+      ]
+    },
+    "data_accuracy": {
+      "weight": 25,
+      "criteria": [
+        "Current price reflects market data within 1 hour",
+        "Analyst consensus percentages match aggregate data",
+        "Price targets sourced from actual analyst firms",
+        "Growth metrics (revenue, EPS) are YoY accurate",
+        "Risk assessment aligns with recent news/events"
+      ]
+    },
+    "signal_quality": {
+      "weight": 20,
+      "criteria": [
+        "Signal (BUY/HOLD/SELL) is supported by fundamentals shown",
+        "Rationale is 1-2 sentences, clear and concise",
+        "Signal considers analyst consensus, valuation, and catalysts",
+        "Appropriate for the specific holding period mentioned",
+        "Caveats and risks are acknowledged"
+      ]
+    },
+    "prose_quality": {
+      "weight": 15,
+      "criteria": [
+        "4-6 paragraphs covering price, drivers, analyst view, outlook, risks, and signal",
+        "Each claim is cited from web search results",
+        "Writing is conversational and accessible",
+        "Addresses bear and bull cases",
+        "Ends with appropriate financial advice disclaimer"
+      ]
+    },
+    "trigger_accuracy": {
+      "weight": 15,
+      "criteria": [
+        "Skill triggers on stock-related questions without explicit '/nh-stock-analyzer'",
+        "Skill does not trigger on general finance questions that don't need analysis",
+        "Skill correctly identifies ticker from company name",
+        "Skill handles ambiguous inputs (e.g., Apple vs. APPL)"
+      ]
+    }
+  },
+  "scoring_rubric": {
+    "excellent": {
+      "range": [90, 100],
+      "description": "All success criteria met, dashboard fully rendered, data accurate, signal well-reasoned, prose excellent"
+    },
+    "good": {
+      "range": [75, 89],
+      "description": "Most criteria met, minor gaps in one area, overall analysis solid and useful"
+    },
+    "acceptable": {
+      "range": [60, 74],
+      "description": "Core criteria met, some gaps in completeness or accuracy, still provides value"
+    },
+    "needs_improvement": {
+      "range": [0, 59],
+      "description": "Significant gaps, missing key elements, or inaccuracy in core data"
+    }
+  }
+}

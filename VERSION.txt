@@ -1,0 +1,32 @@
+nh-stock-analyzer Skill
+===================
+
+Version: 1.0
+Release Date: May 2, 2026
+Author: Navneet Hegde
+License: CC BY-SA 4.0
+
+Features:
+- Interactive stock analysis dashboard
+- Analyst consensus breakdown
+- Price target analysis
+- Buy/Hold/Sell signal with rationale
+- 4-6 paragraph prose summary with citations
+
+Limitations:
+- US-listed stocks primarily
+- Analyst targets 3+ months old
+- Price data delayed ~2 hours
+- Small-cap coverage limited
+
+Testing:
+- 10 test cases provided
+- 5-phase testing framework
+- Average score from tests: [INSERT YOUR SCORE]
+
+Next Version (v1.1 planned):
+- Intraday price charts
+- Earnings calendar
+- Real-time price data
+
+Contact: navneet.hegde@gmail.com
