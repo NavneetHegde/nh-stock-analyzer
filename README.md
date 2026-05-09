@@ -32,7 +32,7 @@ or naturally:
 ```
 "Should I buy Microsoft?"
 "How is Apple doing?"
-"Compare Tesla vs Lucid"
+"Is NVDA worth holding for a year?"
 ```
 
 ## 📊 What You Get
@@ -172,40 +172,22 @@ description: >
 ```
 
 ### Step 4: Update Metadata
-Edit SKILL.md frontmatter:
+Edit the version number in SKILL.md frontmatter:
 ```yaml
 ---
 name: nh-stock-analyzer
 description: >
   Your improved description here
-author: Your Name
-version: 1.0
+author: Navneet Hegde
+version: 1.1
 ---
 ```
 
 ### Step 5: Package & Release
 ```bash
-python package_skill.py nh-stock-analyzer/
-# Creates nh-stock-analyzer.skill file
-# Submit to Anthropic or share with users
+python build_skill.py
 ```
 
-## 💡 Tips for Success
-
-### Before Testing
-- Review `SKILL.md` to understand signal generation logic
-- Check `references/IMPLEMENTATION_NOTES.md` for technical details
-- Familiarize yourself with the 5-point scoring rubric
-
-### While Testing
-- Take screenshots of dashboard widget for documentation
-- Note any edge cases or improvements
-- Track which test cases scored lowest (those need iteration)
-
-### After Testing
-- If score <75/100, iterate on weak areas (data accuracy, prose, etc.)
-- If score ≥85/100, proceed to public release
-- Plan v1.1 improvements (intraday charts, earnings calendar, etc.)
 
 ## 📚 Additional Resources
 
@@ -213,24 +195,6 @@ python package_skill.py nh-stock-analyzer/
 - **Web Search Tool**: Anthropic docs on using web_search for current data
 - **Anthropic Prompt Engineering**: https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview
 
-## 🤝 Feedback & Improvements
-
-This skill was designed to be **iteratively improved**. After release:
-
-1. **Collect user feedback** — What do users ask for most?
-2. **Track issues** — Log bugs, missing features, data problems
-3. **Plan v1.1** — Schedule 2-week improvement cycle based on top requests
-4. **Retest** — Run critical tests again to ensure quality
-
-Future enhancement ideas (see `IMPLEMENTATION_NOTES.md`):
-- Intraday price charts
-- Options data (implied volatility, unusual activity)
-- Insider trading & SEC filings
-- Short interest & covering pressure
-- Earnings calendar with historical beats
-- Sector peer comparison
-- ESG metrics & dividend analysis
-- Earnings revision trends
 
 ## ✨ Final Checklist Before Publishing
 

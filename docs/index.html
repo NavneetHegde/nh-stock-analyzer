@@ -28,6 +28,26 @@
       --accent2:   #2649a8;
     }
 
+    [data-theme="dark"] {
+      --bg:        #111318;
+      --bg2:       #1a1e27;
+      --bg3:       #222840;
+      --border:    #2d3548;
+      --border2:   #3a4560;
+      --text:      #e4e8f0;
+      --text2:     #8a9ab8;
+      --text3:     #4e5f78;
+      --green:     #3dba6e;
+      --green-dim: #0b2318;
+      --amber:     #d49430;
+      --amber-dim: #2a1c06;
+      --red:       #e05a50;
+      --blue:      #5294d6;
+      --blue-dim:  #0d1f3c;
+      --accent:    #5b7ff5;
+      --accent2:   #7c9df7;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: var(--bg);
@@ -94,6 +114,20 @@
       margin-left: 8px;
     }
     .nav-links a.nav-cta:hover { opacity: 0.88; background: var(--accent); }
+    .theme-toggle {
+      width: 32px; height: 32px;
+      border: 1px solid var(--border2);
+      border-radius: 6px;
+      background: var(--bg3);
+      color: var(--text2);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+      transition: background 0.12s, color 0.12s;
+      margin-left: 4px;
+    }
+    .theme-toggle:hover { background: var(--border); color: var(--text); }
 
     /* ── Hero — two column ── */
     .hero {
@@ -398,7 +432,7 @@
             <line x1="1" y1="18" x2="19" y2="18" stroke="white" stroke-width="1" opacity="0.4" stroke-linecap="round"/>
           </svg>
         </span>
-        nh-<span>stock-analyzer</span>
+        <span>nh-stock-analyzer</span>
       </span>
     <div class="nav-links">
       <a href="#features">Features</a>
@@ -407,7 +441,9 @@
       <a href="#install">Install</a>
       <a href="#scoring">Scoring</a>
       <a href="https://github.com/NavneetHegde/nh-stock-analyzer/releases/latest">Download .skill</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fnavneethegde.github.io%2Fnh-stock-analyzer%2F" target="_blank" rel="noopener" class="nav-linkedin">LinkedIn</a>
       <a href="https://github.com/NavneetHegde/nh-stock-analyzer" class="nav-cta">GitHub</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
     </div>
   </div>
 </nav>
@@ -449,16 +485,16 @@
               <div class="mini-card-val">$413</div>
             </div>
             <div class="mini-card">
+              <div class="mini-card-label">1-Week</div>
+              <div class="mini-card-val" style="color:var(--green)">+3%</div>
+            </div>
+            <div class="mini-card">
               <div class="mini-card-label">1-Month</div>
               <div class="mini-card-val" style="color:var(--green)">+11%</div>
             </div>
             <div class="mini-card">
-              <div class="mini-card-label">Azure Growth</div>
-              <div class="mini-card-val" style="color:var(--green)">+39%</div>
-            </div>
-            <div class="mini-card">
-              <div class="mini-card-label">52-Wk Range</div>
-              <div class="mini-card-val" style="color:var(--amber);font-size:13px">$356–$555</div>
+              <div class="mini-card-label">1-Year</div>
+              <div class="mini-card-val" style="color:var(--red)">−7%</div>
             </div>
           </div>
           <div class="mini-row">
@@ -485,6 +521,22 @@
               <div class="target-row"><span>Bear case</span><span style="color:var(--text3)">$415</span></div>
             </div>
           </div>
+          <div class="mini-row">
+            <div class="mini-panel">
+              <div class="mini-panel-title">Trend Strength</div>
+              <div class="target-row"><span>Revenue Growth YoY</span><span style="color:var(--green);font-weight:600">+18% ▲</span></div>
+              <div class="target-row"><span>EPS Growth YoY</span><span style="color:var(--green);font-weight:600">+24% ▲</span></div>
+              <div class="target-row"><span>Earnings Surprise</span><span style="color:var(--green);font-weight:600">Beat ▲</span></div>
+              <div class="target-row"><span>Institutional Flows</span><span style="color:var(--amber);font-weight:600">Mixed</span></div>
+            </div>
+            <div class="mini-panel">
+              <div class="mini-panel-title">Key Risks</div>
+              <div class="target-row"><span>AI CapEx burden</span><span style="color:var(--red);font-size:10px;font-weight:700">HIGH</span></div>
+              <div class="target-row"><span>Valuation premium</span><span style="color:var(--amber);font-size:10px;font-weight:700">MED</span></div>
+              <div class="target-row"><span>Macro / rates</span><span style="color:var(--amber);font-size:10px;font-weight:700">MED</span></div>
+              <div class="target-row"><span>Cloud competition</span><span style="color:var(--text3);font-size:10px;font-weight:700">LOW</span></div>
+            </div>
+          </div>
           <div class="signal-box">
             <div class="signal-label">BUY</div>
             <div class="signal-text">
@@ -507,7 +559,7 @@
     <div class="feature-grid">
       <div class="feature-card">
         <div class="feature-icon">📊</div>
-        <h3>Interactive Dashboard</h3>
+        <h3>Stock Dashboard</h3>
         <p>Price metrics, analyst consensus bars, price target table, trend indicators, and risk badges — all rendered inline.</p>
       </div>
       <div class="feature-card">
@@ -591,8 +643,8 @@
             <div class="step-num">2</div>
             <div class="step-body">
               <h3>Copy to your Claude skills directory</h3>
-              <p>Extract and copy the folder. Claude auto-discovers it on next launch.</p>
-              <pre>cp -r nh-stock-analyzer ~/.claude/skills/</pre>
+              <p>Place the <code>.skill</code> file in your Claude skills folder. Claude auto-discovers it on next launch.</p>
+              <pre>~/.claude/skills/nh-stock-analyzer-v1.0.skill</pre>
             </div>
           </div>
           <div class="step">
@@ -676,7 +728,7 @@
           <line x1="1" y1="18" x2="19" y2="18" stroke="white" stroke-width="1" opacity="0.4" stroke-linecap="round"/>
         </svg>
       </span>
-      nh-<span>stock-analyzer</span>
+      <span>nh-stock-analyzer</span>
     </span>
     <div class="footer-links">
       <a href="https://github.com/NavneetHegde/nh-stock-analyzer/releases">Releases</a>
@@ -688,5 +740,24 @@
   </div>
 </footer>
 
+<script>
+  const btn = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  const stored = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  function applyTheme(dark) {
+    html.setAttribute('data-theme', dark ? 'dark' : 'light');
+    btn.textContent = dark ? '☀️' : '🌙';
+  }
+
+  applyTheme(stored ? stored === 'dark' : prefersDark);
+
+  btn.addEventListener('click', () => {
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    applyTheme(!isDark);
+    localStorage.setItem('theme', !isDark ? 'dark' : 'light');
+  });
+</script>
 </body>
 </html>
