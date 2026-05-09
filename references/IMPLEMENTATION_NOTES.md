@@ -144,11 +144,11 @@ The skill applies a **soft signal** rubric based on:
 
 ## Maintenance & Versioning
 
-**Current Version**: 1.0 (May 2026)
+**Current Version**: 1.1 (May 2026)
 
 **Change Log**:
 - v1.0 — Initial release with 6-section dashboard and prose summary
-- v1.1 (planned) — Add intraday chart, earnings calendar
+- v1.1 — Dark mode, skills.sh publishing, prompt injection guardrails
 - v1.2 (planned) — Sector comparison, ESG metrics
 
 **Testing**: See `/testing/` directory for test suite, test cases, and evaluation framework.

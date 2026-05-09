@@ -1,4 +1,4 @@
-# nh-stock-analyzer Skill Package
+also add # nh-stock-analyzer Skill Package
 
 A comprehensive stock analysis skill for Claude that delivers interactive dashboards with analyst consensus, price targets, and buy/hold/sell recommendations.
 
@@ -209,4 +209,4 @@ python build_skill.py
 
 ---
 
-*nh-stock-analyzer v1.0 - May 2026*
+*nh-stock-analyzer v1.1 - May 2026*
