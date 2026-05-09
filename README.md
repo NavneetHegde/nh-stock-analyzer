@@ -1,4 +1,6 @@
-also add # nh-stock-analyzer Skill Package
+# nh-stock-analyzer Skill Package
+
+[![skills.sh](https://skills.sh/b/NavneetHegde/nh-stock-analyzer)](https://skills.sh/NavneetHegde/nh-stock-analyzer)
 
 A comprehensive stock analysis skill for Claude that delivers interactive dashboards with analyst consensus, price targets, and buy/hold/sell recommendations.
 
